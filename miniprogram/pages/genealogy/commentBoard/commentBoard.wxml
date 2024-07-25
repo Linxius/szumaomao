@@ -5,8 +5,8 @@
   <view class='big-header'>
     <image class='avatar' mode='aspectFill' src='{{cat.avatar.photo_compressed || cat.avatar.photo_id || "/pages/public/images/app_logo.png"}}'></image>
     <view class='name-and-count'>
-      <view class='name'>{{cat.name}}的便利贴墙</view>
-      <view class='count'>共{{comment_count}}张便利贴</view>
+      <view class='name'>{{cat.name}}的留言墙</view>
+      <view class='count'>共{{comment_count}}条留言</view>
     </view>
   </view>
 
@@ -49,8 +49,8 @@
 <view class='big-header fix' hidden="{{!show_fix_header}}">
   <image class='avatar' mode='aspectFill' src='{{cat.avatar.photo_compressed || cat.avatar.photo_id}}'></image>
   <view class='name-and-count'>
-    <view class='name'>{{cat.name}}的便利贴墙</view>
-    <view class='count'>共{{comments.length}}张便利贴</view>
+    <view class='name'>{{cat.name}}的留言墙</view>
+    <view class='count'>共{{comments.length}}条留言</view>
   </view>
 </view>
 
@@ -70,4 +70,4 @@
   <!-- 解决iOS UI兼容性 -->
   <view wx:if="{{keyboard_height == 0}}" id="input-block-bottom"></view>
 </view>
-<view wx:else class="comment-input-closed"><text>便利贴功能已被关闭... QAQ</text></view>
+<view wx:else class="comment-input-closed"><text>个人主体小程序未开放信息发布功能</text></view>

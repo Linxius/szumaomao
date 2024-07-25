@@ -45,7 +45,7 @@ const init_science = [{
     "_id": "5c83b523099e82833622b7eb",
     "cate": "猫咪领养",
     "question": "第一次养猫要准备什么？",
-    "answer": "第一，要做好充足的心理准备，一旦养猫，就要对这个小生命负责，猫咪有自己的性格和习性，建议先了解它们，再决定是否养猫；\n第二，需要评估自己的经济实力，养猫是一个长期的支出，日常生活和医疗费用都不是小数目；\n第三，需要确保自己的家人或合租者能够接受猫咪，不要让猫咪成为压力的来源；\n最后，如果做好了以上准备，就可以购置猫咪的用品了，其中必须的包括：猫粮、猫碗、猫窝、猫抓板、猫砂、猫砂盆、猫玩具等，根据需要进行选择吧。"
+    "answer": "第一，要做好充足的心理准备，一旦养猫，就要对这个小生命负责，猫咪有自己的性格和习性，建议先了解它们，再决定是否养猫；\n第二，需要评估自己的经济实力，养猫是一个长期的支出，日常生活和医疗费用都不是小数目；\n第三，需要确保自己的家人或合租者能够接受猫咪，不要让猫咪成为压力的来源；\n最后，如果做好了以上准备，就可以购置猫咪的用品了，其中必须的包括：猫粮、猫碗、猫窝、公告栏、猫砂、猫砂盆、猫玩具等，根据需要进行选择吧。"
   },
   {
     "_id": "5c83b523099e82833622b7ed",
@@ -107,19 +107,19 @@ const init_setting = [{
       "fullTab": "genealogy,recognize,news,leaderboard,info"
     },
     "subscribe": {
-      "feedback#ID": "IeKS7nPSsBy62REOKiDC2zuz_M7RbKwR97ZiIy_ocmw",
+      "feedback#ID": "w6aeudwogkDoWkS2AX19Z3NIp7cPBgJx",
       "feedback#content": "thing5",
       "feedback#time": "date4",
       "feedback#title": "thing3",
-      "notifyChkFeedback#ID": "jxcvND-iLSQZLZhlHD2A97jP3fm_FWV4wL_GFUcLxcQ",
+      "notifyChkFeedback#ID": "dEXs6_H0JoApeJZ4HRpJ6SEDUz2PHO9suhI7Wj_W0r8",
       "notifyChkFeedback#number": "number5",
       "notifyChkFeedback#time": "time3",
       "notifyChkFeedback#title": "thing2",
-      "notifyVerify#ID": "jxcvND-iLSQZLZhlHD2A91gY0tLSfzyYc3bl39bxVuk",
+      "notifyVerify#ID": "dEXs6_H0JoApeJZ4HRpJ6SEDUz2PHO9suhI7Wj_W0r8",
       "notifyVerify#number": "number5",
       "notifyVerify#time": "time6",
       "notifyVerify#title": "thing2",
-      "verify#ID": "AtntuAUGnzoBumjfmGB8Yyc-67FUxRH5Cw7bnEYFCXo",
+      "verify#ID": "0Nn4YGQPAmiEp7DN1eZBdxWhhYa0oWhy_G8T7Bsg7-A",
       "verify#content": "thing7",
       "verify#note": "thing5",
       "verify#title": "thing2"

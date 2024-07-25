@@ -18,7 +18,7 @@
       </view>
       <view class="num">
         <view class="num-title">{{numUserComments !== null && numUserComments !== undefined ? numUserComments : '-'}}</view>
-        <text class='small-title'>便利贴</text>
+        <text class='small-title'>留言</text>
       </view>
   </view>
 </view>

@@ -80,8 +80,8 @@
   "window": {
     "backgroundColor": "#fff",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffd101",
-    "navigationBarTitleText": "中大猫谱",
+    "navigationBarBackgroundColor": "#F57A7E",
+    "navigationBarTitleText": "荔园猫猫馆",
     "navigationBarTextStyle": "black"
   },
   "supportedMaterials": [

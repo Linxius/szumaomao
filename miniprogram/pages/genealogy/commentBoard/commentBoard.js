@@ -122,7 +122,7 @@ Page({
     const cat_name = cat.name;
     const cat_avatar = cat.avatar.photo_compressed || cat.avatar.photo_id;
     return {
-      title: `${cat_name}的便利贴墙 - ${config.text.app_name}`,
+      title: `${cat_name}的留言墙 - ${config.text.app_name}`,
       imageUrl: cat_avatar,
     }
   },
@@ -192,7 +192,7 @@ Page({
     });
   },
 
-  // 发送便利贴
+  // 发送留言
   async sendComment() {
     // 发送中
     if (this.jsData.sendLock) {
@@ -232,7 +232,7 @@ Page({
       return false;
     }
 
-    // 插入便利贴
+    // 插入留言
     const {paper_colors, paper_color_select} = this.data;
     var item = {
       content: content,
@@ -267,7 +267,7 @@ Page({
       })).result;
 
       console.log("curdOp(add-Comment) result): ", res, user);
-      // 插入最新便利贴 + 清空输入框
+      // 插入最新留言 + 清空输入框
       console.log(item);
       item.userInfo = user.userInfo;
       item.datetime = formatDate(new Date(), "yyyy-MM-dd hh:mm:ss")
@@ -297,7 +297,7 @@ Page({
     }
   },
 
-  // 加载更多便利贴
+  // 加载更多留言
   // TODO(zing): 支持排序方式修改
   async loadMoreComment() {
     // 常用的对象
@@ -338,7 +338,7 @@ Page({
     // 弹窗提示一下
     var res = await wx.showModal({
       title: '提示',
-      content: `确定删除\"${username}\"的便利贴？`
+      content: `确定删除\"${username}\"的留言？`
     });
 
     if (!res.confirm) {

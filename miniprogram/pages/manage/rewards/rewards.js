@@ -27,7 +27,7 @@ Page({
 
   async loadRewards() {
     wx.showLoading({
-      title: '加载投喂记录中',
+      title: '加载捐赠记录中',
     })
     const db = await cloud.databaseAsync();
     var res = await db.collection('reward').orderBy('recordDate', 'desc').orderBy('mdate', 'desc').get();

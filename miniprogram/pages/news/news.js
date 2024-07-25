@@ -21,22 +21,24 @@ Page({
       logo: '/pages/public/images/news/all.png'
     }, {
       id: 0,
-      name: '领养',
+      name: '小日志',
       checked: false,
       logo: '/pages/public/images/news/adopt.png'
-    }, {
-      id: 1,
-      name: '救助',
-      checked: false,
-      logo: '/pages/public/images/news/help.png'
-    }, {
+    }, 
+    // {
+    //   id: 1,
+    //   name: '救助',
+    //   checked: false,
+    //   logo: '/pages/public/images/news/help.png'
+    // }, 
+    {
       id: 2,
       name: '活动',
       checked: false,
       logo: '/pages/public/images/news/activity.png'
     }, {
       id: 3,
-      name: '其他',
+      name: '小黑板',
       checked: false,
       logo: '/pages/public/images/news/other.png'
     }],

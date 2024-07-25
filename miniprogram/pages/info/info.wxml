@@ -16,10 +16,10 @@
     </view>
     <view class="num">
       <view class="num-title">{{numAllComments || '-'}}</view>
-      <text class='small-title'>张便利贴</text>
+      <text class='small-title'>条留言</text>
     </view>
   </view>
-  <view class="num-info">
+  <!-- <view class="num-info">
     <view class="num">
       <view class="num-title">{{adoptRate || '-'}}</view>
       <text class='small-title'>领养率</text>
@@ -28,7 +28,7 @@
       <view class="num-title">{{sterilizationRate || '-'}}</view>
       <text class='small-title'>绝育率</text>
     </view>
-  </view>
+  </view> -->
 </view>
 
 <!-- 卡片布局 -->
@@ -43,6 +43,10 @@
 
 <!-- <scroll-view class="scroll-friend-link-box" scroll-x="true" enable-flex='true' enhanced="true" show-scrollbar='false'></scroll-view> -->
 <view class="block">
+  <!-- <view class="friend-link" bindtap="clickFriendLink" data-appid="wxee206dbccd6307ec" wx:key="name">
+    <image mode='aspectFit' src="/pages/public/images/app_logo.png"></image>
+    <view class="friend-link-text">周边商店</view>
+  </view> -->
   <view wx:for="{{friendApps}}" class="friend-link" bindtap="clickFriendLink" data-appid="{{item.appid}}" wx:key="name">
     <image mode='aspectFit' src="{{item.logo}}"></image>
     <view class="friend-link-text">{{item.name}}</view>

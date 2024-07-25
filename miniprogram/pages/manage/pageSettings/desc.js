@@ -20,10 +20,10 @@ const funcTypes = [{
   name: "上传照片"
 }, {
   val: FuncTypes.comment,
-  name: "便利贴墙"
+  name: "留言墙"
 }, {
   val: FuncTypes.reward,
-  name: "打赏投喂"
+  name: "打赏捐赠"
 }, {
   val: FuncTypes.feedback,
   name: "反馈"
@@ -222,7 +222,7 @@ module.exports = {
     },
     "reward_video": {
       type: "text",
-      tip: "打赏投喂页激励广告ID",
+      tip: "打赏捐赠页激励广告ID",
       default: "your_ad_id"
     },
     "badge_video": {

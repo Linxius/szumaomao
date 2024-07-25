@@ -212,7 +212,7 @@ async function checkAuth(page, level) {
   }
   
   page.setData({
-    tipText: `只有管理员Level-${level}能进入嗷`,
+    tipText: `个人主体小程序未开放该功能`,
     tipBtn: true,
   });
   return false;

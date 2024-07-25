@@ -22,18 +22,23 @@ Page({
         label:"个人主页",
         path:"/pages/info/userInfo/userInfo",
       },{
-        icon:"/pages/public/images/info/btn/badge.svg",
-        label:"徽章口袋",
-        path:"/pages/packageA/pages/info/badge/badge",
-      },{
-        icon:"/pages/public/images/info/btn/team.svg",
-        label:"开发团队",
-        path:"/pages/info/devTeam/devTeam",
-      },{
+        // icon:"/pages/public/images/info/btn/badge.svg",
+        // label:"徽章口袋",
+        // path:"/pages/packageA/pages/info/badge/badge",
         icon:"/pages/public/images/info/btn/reward.svg",
-        label:"投喂罐头",
+        label:"打赏捐助",
         path:"/pages/info/reward/reward",
-      }
+      },
+    //  {
+    //     icon:"/pages/public/images/info/btn/team.svg",
+    //     label:"开发团队",
+    //     path:"/pages/info/devTeam/devTeam",
+    //   }, 
+      // {
+      //   // icon:"/pages/public/images/info/btn/reward.svg",
+      //   // label:"打赏捐助",
+      //   // path:"/pages/info/reward/reward",
+      // }
     ],
 
     nums: {},  // 菜单栏的各个数量
@@ -67,7 +72,7 @@ Page({
             name: "操作手册",
             path: "guide",
             icon: "icon-description",
-            dot: "true"
+            // dot: "true"
           },
           {
             name: "照片审核",
@@ -76,7 +81,7 @@ Page({
             icon: "icon-photo-o"
           },
           {
-            name: "便利贴审核",
+            name: "留言审核",
             path: "/pages/manage/checkComment/checkComment",
             num: "numChkComments",
             icon: "icon-smile-comment-o"
@@ -88,7 +93,7 @@ Page({
             icon: "icon-envelop-o"
           },
           {
-            name: "猫抓板公告",
+            name: "公告栏",
             path: "/pages/news/createNews/createNews",
             icon: "icon-edit"
           },
@@ -117,21 +122,21 @@ Page({
             path: "/pages/tools/inviteUser/inviteUser",
             icon: "icon-star-o"
           },
-          {
-            name: "徽章管理",
-            path: "/pages/manage/badgeDef/badgeDef",
-            icon: "icon-medel-o"
-          },
+          // {
+          //   name: "徽章管理",
+          //   path: "/pages/manage/badgeDef/badgeDef",
+          //   icon: "icon-medel-o"
+          // },
           {
             name: "页面配置",
             path: "/pages/manage/pageSettings/pageSettings",
             icon: "icon-newspaper-o"
           },
-          {
-            name: "投喂记录",
-            path: "/pages/manage/rewards/rewards",
-            icon: "icon-balance-o"
-          },
+          // {
+          //   name: "捐赠记录",
+          //   path: "/pages/manage/rewards/rewards",
+          //   icon: "icon-balance-o"
+          // },
           {
             name: "照片处理",
             path: "/pages/manage/imProcess/imProcess",
@@ -185,7 +190,7 @@ Page({
     const allCatQf = {};
     // 所有照片数量
     const allPhotoQf = { verified: true, photo_id: /^((?!\.heic$).)*$/i };
-    // 所有便利贴数量
+    // 所有留言数量
     const allCommentQf = { deleted: _.neq(true), needVerify: _.neq(true) };
     // 所有领养
     const adoptQf = { adopt: 1 };

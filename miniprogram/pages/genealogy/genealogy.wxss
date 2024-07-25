@@ -14,16 +14,18 @@ scroll-view {
 
 .cards{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
 
 .card {
-  margin-bottom: 50rpx;
-  font-size: 24rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  font-size: 20rpx;
   line-height: 24rpx;
-  width: 635rpx;
+  width: 348rpx;
   border-radius: 15rpx;
 
   box-sizing: border-box;
@@ -35,7 +37,7 @@ scroll-view {
 }
 
 .card view.image {
-  height:590rpx;
+  height:350rpx;
   border-radius: 15rpx 15rpx 0 0;
   position: relative;
   overflow: hidden;
@@ -55,7 +57,7 @@ scroll-view {
 
 .card view.image image {
   width: 100%;
-  height: 590rpx;
+  height: 350rpx;
   background-color: var(--color-gray-light);
 	background-image: var(--img-default);
   background-position: center center;
@@ -79,29 +81,28 @@ scroll-view {
 
 .card .info .name {
   height: 30rpx;
-  font-size: 33rpx;
+  font-size: 30rpx;
   line-height: 30rpx;
-
   font-weight: 600;
-  letter-spacing: 2rpx;
+  letter-spacing: 1rpx;
 }
 
 .card .info image.gender {
-  height: 27rpx;
-  width: 27rpx;
-  margin-right: 15rpx;
-  margin-left: 8rpx;
+  height: 20rpx;
+  width: 20rpx;
+  margin-right: 10rpx;
+  margin-left: 5rpx;
 }
 
 .card .info .adopt {
   padding: 0 10rpx;
-  height: 30rpx;
+  height: 25rpx;
   border-radius: 15rpx;
   font-size: 18rpx;
   line-height: 30rpx;
   text-align: center;
   background-color: var(--color-primary);
-  margin-left: 8rpx;
+  margin-right: 8rpx;
 }
 
 .card .info .to_star {

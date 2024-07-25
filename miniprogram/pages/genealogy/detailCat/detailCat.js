@@ -158,7 +158,7 @@ Page({
     this.setData({
       photoPopWeight: this.jsData.page_settings['photoPopWeight'] || 10
     });
-    // 加载猫猫，是否开启上传、便利贴留言功能
+    // 加载猫猫，是否开启上传、留言留言功能
     var [_, canUpload, canComment, _] = await Promise.all([
       this.loadCat(),
       checkCanUpload(),

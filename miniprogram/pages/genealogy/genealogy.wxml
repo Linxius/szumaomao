@@ -79,12 +79,14 @@
             <image mode='aspectFill' class='gender' wx:if='{{item.gender === "公"}}' src="/pages/public/images/card/card/male.png"></image>
             <image mode='aspectFill' class='gender' wx:if='{{item.gender === "母"}}' src="/pages/public/images/card/card/female.png"></image>
           </block>
-          <view wx:if='{{item.adopt}}' class='adopt'>{{adopt_desc[item.adopt]}}</view>
-          <view wx:if='{{item.to_star}}' class='to_star'>{{text_cfg.genealogy.to_star_tip}}</view>
           <view class='popularity'>
             <image src='/pages/public/images/card/card/pop.png'></image>
             <text> {{item.popularity + (item.photo_count_total? item.photo_count_total * photoPopWeight: 0) }}</text>
           </view>
+        </view>
+          <view class='line'>
+          <view wx:if='{{item.adopt}}' class='adopt'>{{adopt_desc[item.adopt]}}</view>
+          <view wx:if='{{item.to_star}}' class='to_star'>{{text_cfg.genealogy.to_star_tip}}</view>
           <view class='comment' wx:if="{{item.comment_count}}">
             <image src='/pages/public/images/card/card/comment.png'></image>
             <text> {{item.comment_count}}</text>
