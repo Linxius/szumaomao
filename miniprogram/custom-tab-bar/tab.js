@@ -15,7 +15,7 @@ module.exports = {
     "pagePath": "pages/news/news",
     "iconPath": "/pages/public/images/tabs/default/sci.png",
     "selectedIconPath": "/pages/public/images/tabs/active/sci.png",
-    "text": "猫抓板"
+    "text": "公告栏"
   },
   leaderboard: {
     "pagePath": "pages/leaderboard/leaderboard",

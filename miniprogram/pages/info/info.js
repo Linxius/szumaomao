@@ -22,24 +22,28 @@ Page({
     cards: [
       {
         icon: "/pages/public/images/info/btn/dashboard.svg",
-        label: "详细数据看板",
+        label: "数据看板",
         path: "/pages/info/dashboard/dashboard",
-        css: "long"
-      }, {
+        // css: "long"
+      }, 
+      {
         icon: "/pages/public/images/info/btn/user.svg",
         label: "个人主页",
         path: "/pages/info/userInfo/userInfo",
-      }, {
-        icon: "/pages/public/images/info/btn/badge.svg",
-        label: "徽章口袋",
-        path: "/pages/packageA/pages/info/badge/badge",
-      }, {
-        icon: "/pages/public/images/info/btn/team.svg",
-        label: "开发团队",
-        path: "/pages/info/devTeam/devTeam",
-      }, {
+      }, 
+      // {
+      //   icon: "/pages/public/images/info/btn/badge.svg",
+      //   label: "徽章口袋",
+      //   path: "/pages/packageA/pages/info/badge/badge",
+      // }, 
+      // {
+      //   icon: "/pages/public/images/info/btn/team.svg",
+      //   label: "开发团队",
+      //   path: "/pages/info/devTeam/devTeam",
+      // }, 
+      {
         icon: "/pages/public/images/info/btn/reward.svg",
-        label: "投喂罐头",
+        label: "打赏捐助",
         path: "/pages/info/reward/reward",
       }
     ],
@@ -76,7 +80,7 @@ Page({
             name: "操作手册",
             path: "guide",
             icon: "icon-description",
-            dot: "true"
+            // dot: "true"
           },
           // {
           //   name: "数据看板",
@@ -90,7 +94,7 @@ Page({
             icon: "icon-photo-o"
           },
           {
-            name: "便利贴审核",
+            name: "留言审核",
             path: "/pages/manage/checkComment/checkComment",
             num: "numChkComments",
             icon: "icon-smile-comment-o"
@@ -102,7 +106,7 @@ Page({
             icon: "icon-envelop-o"
           },
           {
-            name: "猫抓板公告",
+            name: "公告栏",
             path: "/pages/news/createNews/createNews",
             icon: "icon-edit"
           },
@@ -126,21 +130,21 @@ Page({
             path: "/pages/tools/inviteUser/inviteUser",
             icon: "icon-star-o"
           },
-          {
-            name: "徽章管理",
-            path: "/pages/manage/badgeDef/badgeDef",
-            icon: "icon-medel-o"
-          },
+          // {
+          //   name: "徽章管理",
+          //   path: "/pages/manage/badgeDef/badgeDef",
+          //   icon: "icon-medel-o"
+          // },
           {
             name: "页面配置",
             path: "/pages/manage/pageSettings/pageSettings",
             icon: "icon-newspaper-o"
           },
-          {
-            name: "投喂记录",
-            path: "/pages/manage/rewards/rewards",
-            icon: "icon-balance-o"
-          },
+          // {
+          //   name: "捐赠记录",
+          //   path: "/pages/manage/rewards/rewards",
+          //   icon: "icon-balance-o"
+          // },
           {
             name: "照片处理",
             path: "/pages/manage/imProcess/imProcess",
@@ -164,7 +168,7 @@ Page({
     });
 
     const { result: friendLinkRes } = await app.mpServerless.db.collection('setting').findOne({ _id: 'friendLink' });
-    
+
     let { apps } = friendLinkRes;
     for (let i = 0; i < apps.length; i++) {
       apps[i].logo = await signCosUrl(apps[i].logo);
@@ -196,7 +200,7 @@ Page({
     const allCatQf = { deleted: { $ne: 1 } };
     // 所有照片数量
     const allPhotoQf = { verified: true };
-    // 所有便利贴数量
+    // 所有留言数量
     const allCommentQf = { deleted: { $ne: true }, needVerify: { $ne: true } };
     // 所有领养
     const adoptQf = { adopt: 1, deleted: { $ne: 1 } };

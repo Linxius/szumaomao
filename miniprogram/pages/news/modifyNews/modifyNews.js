@@ -24,19 +24,21 @@ Page({
     photos_path: [],
     buttons: [{
       id: 0,
-      name: '领养',
+      name: '日志',
       checked: false,
-    }, {
-      id: 1,
-      name: '救助',
-      checked: false,
-    }, {
+    }, 
+    // {
+    //   id: 1,
+    //   name: '救助',
+    //   checked: false,
+    // }, 
+    {
       id: 2,
       name: '活动',
       checked: false,
     }, {
       id: 3,
-      name: '其他',
+      name: '黑板',
       checked: false,
     }],
     modalButtons: [{

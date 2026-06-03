@@ -25,7 +25,7 @@ Page({
 
   async loadRewards() {
     wx.showLoading({
-      title: '加载投喂记录中',
+      title: '加载捐赠记录中',
     })
     var { result } = await app.mpServerless.db.collection('reward').find({}, { sort: { mdate: -1, recordDate: -1 } });
     for (var r of result) {

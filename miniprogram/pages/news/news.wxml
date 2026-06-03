@@ -2,11 +2,11 @@
   <image src='/pages/public/images/system/loading.gif'></image>
 </view>
 
-<swiper indicator-dots="1" indicator-active-color="var(--color-primary)" circular="1" autoplay="true" interval="4000" duration="1000">
+<!-- <swiper indicator-dots="1" indicator-active-color="var(--color-primary)" circular="1" autoplay="true" interval="4000" duration="1000">
   <swiper-item wx:for="{{images}}" wx:key="unique" bindtap='gotoSciDetail' data-cate='{{index}}'>
     <image src='{{item}}'></image>
   </swiper-item>
-</swiper>
+</swiper> -->
 
 <view class='button_container'>
   <block wx:for="{{buttons}}" wx:key="buttons">

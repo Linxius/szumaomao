@@ -39,7 +39,7 @@
         <view class='iconfont icon-fire'></view>
         <text> {{cat.popularity + (cat.photo_count_total? cat.photo_count_total * photoPopWeight: 0)}}</text>
       </view>
-      <view class='count comment' bindtap="showPopTip"  data-tip="便利贴数">
+      <view class='count comment' bindtap="showPopTip"  data-tip="留言数">
         <view class='iconfont icon-chat'></view>
         <text> {{cat.comment_count || 0}}</text>
       </view>

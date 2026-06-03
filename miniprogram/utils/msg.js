@@ -237,7 +237,7 @@ async function sendNotifyChkFeeedback() {
 }
 
 
-// 发送审核便利贴留言消息
+// 发送审核留言留言消息
 function sendVerifyCommentNotice(notice_list) {
   const cfg = msgConfig.verify;  // 和照片审核通用
   const openids = Object.keys(notice_list);
@@ -246,12 +246,12 @@ function sendVerifyCommentNotice(notice_list) {
   }
   // 获取需要发送的list
   for (const openid of openids) {
-    const content = '本次共收录' + notice_list[openid].accepted + '张便利贴' + (notice_list[openid].deleted ? ('，有' + notice_list[openid].deleted + '张未被收录。') : '。');
+    const content = '本次共收录' + notice_list[openid].accepted + '条留言' + (notice_list[openid].deleted ? ('，有' + notice_list[openid].deleted + '张未被收录。') : '。');
     const note = notice_list[openid].deleted ? '未被收录可能因为与猫猫无关。' : '感谢你的支持！';
 
     const data = {
       [cfg.title]: {
-        value: '你的便利贴审核完成！'
+        value: '你的留言审核完成！'
       },
       [cfg.content]: {
         value: content
@@ -272,7 +272,7 @@ function sendVerifyCommentNotice(notice_list) {
 
 
 
-// 发送提醒审核便利贴留言消息
+// 发送提醒审核留言留言消息
 async function sendNotifyVertifyCommentNotice(numUnchkComment) {
   const { result: subMsgSettings } = await app.mpServerless.db.collection('setting').find({ _id:'subscribeMsg' });
 
@@ -296,7 +296,7 @@ async function sendNotifyVertifyCommentNotice(numUnchkComment) {
   for (var manager of resortedML) {
     var data = {
       [cfg.title]: {
-        value: '又有几张新便利贴啦，有空看看吧'
+        value: '又有几张新留言啦，有空看看吧'
       },
       [cfg.number]: {
         value: numUnchkComment

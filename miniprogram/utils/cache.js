@@ -59,7 +59,7 @@ function removeCacheItem(key) {
 const cacheTime = {
   catAvatar: 0.1,  // 首页封面图
   catItem: 0.1,  // 猫猫信息
-  commentCount: 0,  // 便利贴数量
+  commentCount: 0,  // 留言数量
   likeItem: 72,  // 点赞行为
   pageSetting: 24*7,  // 页面设置
   genealogyFCampus: 24*7*31,  // 首页校区过滤选项

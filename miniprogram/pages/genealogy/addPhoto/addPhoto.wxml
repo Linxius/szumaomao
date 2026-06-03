@@ -2,7 +2,7 @@
     <view class='userInfo'>
       <image src='/pages/public/images/system/user.png'></image>
       <view>
-        <text>暂时无法上传，请联系管理员 TAT...\n</text>
+        <text>个人主体小程序未开放信息发布功能\n</text>
       </view>
     </view>
   <button class='long primary' bindtap="goBackIndex">返回首页</button>
