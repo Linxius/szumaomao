@@ -31,7 +31,8 @@ Component({
     if (!currentPath) {
       await sleep(100);
     }
-    const settings = await this.getSettings();
+    const accessSettings = await this.getSettings("accessCtrl");
+    const settings = await this.getSettings("tabBarCtrl");
     if (settings == undefined) {
       console.log("no settings, currentPath:", currentPath);
       if (isTabPath(currentPath)) {
@@ -47,6 +48,15 @@ Component({
         list: tab,
         showTabBar: true,
       });
+      return;
+    }
+    // 审核模式：只展示猫谱和关于
+    if (accessSettings && accessSettings.auditMode && accessSettings.auditMode.includes("true")) {
+      this.setData({
+        list: [tab.genealogy, tab.info].filter(Boolean),
+        showTabBar: true,
+      });
+      wx.setStorageSync('tabBarOrder', ['genealogy', 'info']);
       return;
     }
     const fullTab = settings.fullTab.split(',');
@@ -105,11 +115,11 @@ Component({
     },
     
     // 带有重试机制的读取设置
-    async getSettings() {
+    async getSettings(key = "tabBarCtrl") {
       let maxTry = 3;
       let res = undefined;
       while (res === undefined && maxTry > 0) {
-        res = await getGlobalSettings("tabBarCtrl");
+        res = await getGlobalSettings(key);
         maxTry --;
         await sleep(300);
       }

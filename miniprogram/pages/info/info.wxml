@@ -15,7 +15,7 @@
       <view class="num-title">{{numAllPhotos || '-'}}</view>
       <text class='small-title'>张照片</text>
     </view>
-    <view class="num">
+    <view class="num" wx:if="{{!auditMode}}">
       <view class="num-title">{{numAllComments || '-'}}</view>
       <text class='small-title'>条留言</text>
     </view>

@@ -64,33 +64,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cat: {},
-    album: [], // 所有照片
-    bottomText: config.text.detail_cat.bottom_text_loading,
-    showHoverHeader: false, // 显示浮动的相册标题
-    hideBgBlock: false, // 隐藏背景黄块
-    canvas: {}, // 画布的宽高
-    canUpload: false, // 是否可以上传照片
-    showGallery: false,
-    galleryPhotos: [],
-    currentImg: 0, // 预览组件当前预览的图片
-    photoOrderSelectorRange: photoOrder,
-    photoOrderSelectorKey: "name",
-    photoOrderSelected: 0,
+     cat: {},
+     album: [], // 所有照片
+     bottomText: config.text.detail_cat.bottom_text_loading,
+     showHoverHeader: false, // 显示浮动的相册标题
+     hideBgBlock: false, // 隐藏背景黄块
+     canvas: {}, // 画布的宽高
+     canUpload: false, // 是否可以上传照片
+     showGallery: false,
+     galleryPhotos: [],
+     currentImg: 0, // 预览组件当前预览的图片
+     photoOrderSelectorRange: photoOrder,
+     photoOrderSelectorKey: "name",
+     photoOrderSelected: 0,
+     auditMode: false,
 
-    // 领养状态
-    adopt_desc: config.cat_status_adopt,
-    text_cfg: config.text,
+     // 领养状态
+     adopt_desc: config.cat_status_adopt,
+     text_cfg: config.text,
 
-    activeUserBadge: -1,
+     activeUserBadge: -1,
 
-    // 是否展开评分详情
-    showDetailRating: false,
+     // 是否展开评分详情
+     showDetailRating: false,
 
-    // 疫苗记录相关
-    showVaccineHistory: false,
-    vaccineHistory: [],
-  },
+     // 疫苗记录相关
+     showVaccineHistory: false,
+     vaccineHistory: [],
+   },
 
   jsData: {
     // 页面设置，从global读取
@@ -115,6 +116,12 @@ Page({
     // 判断是否为管理员
     this.setData({
       is_manager: (await isManagerAsync(3))
+    });
+
+    // 读取审核模式
+    const settings = await getGlobalSettings("accessCtrl");
+    this.setData({
+      auditMode: settings && settings.auditMode && settings.auditMode.includes("true")
     });
 
     // 先判断一下这个用户在12小时之内有没有点击过这只猫

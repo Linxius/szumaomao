@@ -99,7 +99,8 @@ const init_setting = [{
       "ctrlUser": "guest",
       "ctrlVersion": "*",
       "disabledFunc": "",
-      "limitedFunc": "reward,feedback,fullTab,uploadPhoto,comment"
+      "limitedFunc": "reward,feedback,fullTab,uploadPhoto,comment",
+      "auditMode": []
     },
     "tabBarCtrl": {
       "ctrlTab": "news",

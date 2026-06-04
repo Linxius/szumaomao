@@ -70,6 +70,12 @@ module.exports = {
       default: "",
       choices: funcTypes
     },
+    auditMode: {
+      type: "multi-select",
+      tip: "小程序模式",
+      default: "",
+      choices: [{ val: "true", name: "模式打开" }]
+    },
   },
   tabBarCtrl: {
     tip: "底部TabBar控制",

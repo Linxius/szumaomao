@@ -1,7 +1,7 @@
 // miniprogram/pages/info/info.js
 import { isManagerAsync } from "../../utils/user";
 import { text as text_cfg, mpcode_img } from "../../config";
-import { showTab } from "../../utils/page";
+import { showTab, getGlobalSettings } from "../../utils/page";
 
 const share_text = text_cfg.app_name + ' - ' + text_cfg.info.share_tip;
 
@@ -12,54 +12,55 @@ import { signCosUrl } from "../../utils/common";
 const app = getApp();
 
 Page({
-  data: {
-    logo_img,
-    friendApps: [],
-    friendLinkImgLoaded: false,
-    text_cfg: text_cfg,
+ data: {
+     logo_img,
+     friendApps: [],
+     friendLinkImgLoaded: false,
+     text_cfg: text_cfg,
+     auditMode: false,
 
-    // 卡片，不需要设计绘制卡片图，只需用放图标即可
-    cards: [
-      {
-        icon: "/pages/public/images/info/btn/dashboard.svg",
-        label: "数据看板",
-        path: "/pages/info/dashboard/dashboard",
-        // css: "long"
-      }, 
-      {
-        icon: "/pages/public/images/info/btn/user.svg",
-        label: "个人主页",
-        path: "/pages/info/userInfo/userInfo",
-      }, 
-      {
-        icon: "/pages/public/images/info/btn/badge.svg",
-        label: "联系我们",
-        path: "/pages/info/contact/contact",
-      }, 
-      // {
-      //   icon: "/pages/public/images/info/btn/badge.svg",
-      //   label: "徽章口袋",
-      //   path: "/pages/packageA/pages/info/badge/badge",
-      // }, 
-      // {
-      //   icon: "/pages/public/images/info/btn/team.svg",
-      //   label: "开发团队",
-      //   path: "/pages/info/devTeam/devTeam",
-      // }, 
-      {
-        icon: "/pages/public/images/info/btn/reward.svg",
-        label: "打赏捐助",
-        path: "/pages/info/reward/reward",
-      }
-    ],
+     // 卡片，不需要设计绘制卡片图，只需用放图标即可
+     cards: [
+       {
+         icon: "/pages/public/images/info/btn/dashboard.svg",
+         label: "数据看板",
+         path: "/pages/info/dashboard/dashboard",
+         // css: "long"
+       }, 
+       {
+         icon: "/pages/public/images/info/btn/user.svg",
+         label: "个人主页",
+         path: "/pages/info/userInfo/userInfo",
+       }, 
+       {
+         icon: "/pages/public/images/info/btn/badge.svg",
+         label: "联系我们",
+         path: "/pages/info/contact/contact",
+       }, 
+       // {
+       //   icon: "/pages/public/images/info/btn/badge.svg",
+       //   label: "徽章口袋",
+       //   path: "/pages/packageA/pages/info/badge/badge",
+       // }, 
+       // {
+       //   icon: "/pages/public/images/info/btn/team.svg",
+       //   label: "开发团队",
+       //   path: "/pages/info/devTeam/devTeam",
+       // }, 
+       {
+         icon: "/pages/public/images/info/btn/reward.svg",
+         label: "打赏捐助",
+         path: "/pages/info/reward/reward",
+       }
+     ],
 
-    nums: {},  // 菜单栏的各个数量
-    // 菜单栏是否显示的条件
-    showCond: {
-      tools: true,
-      dev: false,
-      manager: false,
-    },
+     nums: {},  // 菜单栏的各个数量
+     // 菜单栏是否显示的条件
+     showCond: {
+       tools: true,
+       dev: false,
+       manager: false,
+     },
     // 菜单列表
     menuList: [
       {
@@ -198,6 +199,35 @@ Page({
     // 获取version
     this.setData({
       version: getApp().globalData.version
+    });
+
+    // 读取审核模式
+    const settings = await getGlobalSettings("accessCtrl");
+    const isAuditMode = settings && settings.auditMode && settings.auditMode.includes("true");
+    let filteredCards = [
+      {
+        icon: "/pages/public/images/info/btn/dashboard.svg",
+        label: "数据看板",
+        path: "/pages/info/dashboard/dashboard",
+      }, 
+    ];
+    if (!isAuditMode) {
+      filteredCards.push(
+        {
+          icon: "/pages/public/images/info/btn/badge.svg",
+          label: "联系我们",
+          path: "/pages/info/contact/contact",
+        },
+        {
+          icon: "/pages/public/images/info/btn/reward.svg",
+          label: "打赏捐助",
+          path: "/pages/info/reward/reward",
+        }
+      );
+    }
+    this.setData({
+      auditMode: isAuditMode,
+      cards: filteredCards
     });
 
     // 获取普通用户也能看的数据
