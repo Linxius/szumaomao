@@ -169,7 +169,7 @@ Page({
 
     const { result: friendLinkRes } = await app.mpServerless.db.collection('setting').findOne({ _id: 'friendLink' });
 
-    let { apps } = friendLinkRes;
+    let apps = friendLinkRes?.apps || [];
     for (let i = 0; i < apps.length; i++) {
       apps[i].logo = await signCosUrl(apps[i].logo);
     }
