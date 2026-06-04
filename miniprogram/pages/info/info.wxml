@@ -44,19 +44,19 @@
   </view>
 </view>
 
-<view class='block-name'>友情链接</view>
+<!-- <view class='block-name'>友情链接</view>
 
-<!-- <scroll-view class="scroll-friend-link-box" scroll-x="true" enable-flex='true' enhanced="true" show-scrollbar='false'></scroll-view> -->
+<scroll-view class="scroll-friend-link-box" scroll-x="true" enable-flex='true' enhanced="true" show-scrollbar='false'></scroll-view>
 <view class="block">
-  <!-- <view class="friend-link" bindtap="clickFriendLink" data-appid="wxee206dbccd6307ec" wx:key="name">
+  <view class="friend-link" bindtap="clickFriendLink" data-appid="wxee206dbccd6307ec" wx:key="name">
     <image mode='aspectFit' src="/pages/public/images/app_logo.png"></image>
     <view class="friend-link-text">周边商店</view>
-  </view> -->
+  </view>
   <view wx:for="{{friendApps}}" class="friend-link" bindtap="clickFriendLink" data-appid="{{item.appid}}" wx:key="name">
     <image mode='aspectFit' src="{{item.logo}}"></image>
     <view class="friend-link-text">{{item.name}}</view>
   </view>
-</view>
+</view> -->
 
 <!-- 工具 -->
 <block wx:for="{{menuList}}" wx:key="title" wx:for-item="menu" wx:if="{{showCond[menu.show]}}">

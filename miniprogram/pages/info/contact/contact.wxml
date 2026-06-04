@@ -1,0 +1,20 @@
+<!--miniprogram/pages/info/contact/contact.wxml-->
+
+<view class='block'>
+  <view class='title'>联系我们</view>
+  <view class='desc'>
+    <text>领养咨询、活动合作</text>
+  </view>
+  <view style='flex-basis:100%;'>
+    <view class="buttons">
+      <button bindtap='openImg' data-platform='official_weixin' style='flex-basis:100%;'>官方微信号</button>
+      <button bindtap='openImg' data-platform='weixin' style='flex-basis:100%;'>微信公众号</button>
+      <button bindtap='openImg' data-platform='xiaohongshu' style='flex-basis:100%;'>小红书</button>
+      <button bindtap='openImg' data-platform='douyin' style='flex-basis:100%;'>抖音</button>
+    </view>
+  </view>
+</view>
+
+<view class='tip'>欢迎点击以上平台查看二维码关注或联系我们</view>
+
+<view style='height: 20rpx;'></view>

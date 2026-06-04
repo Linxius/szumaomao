@@ -32,6 +32,11 @@ module.exports = {
 
   // 赞赏码图片
   reward_img: `https://cos.ap-guangzhou.myqcloud.com/szuanimals-1327677963/系统/赞赏码.jpg`,
+  // 联系我们二维码
+  contact_qr_official_weixin: `https://cos.ap-guangzhou.myqcloud.com/szuanimals-1327677963/系统/微信.jpg`,
+  contact_qr_weixin: `https://cos.ap-guangzhou.myqcloud.com/szuanimals-1327677963/系统/公众号.jpg`,
+  contact_qr_xiaohongshu: `https://cos.ap-guangzhou.myqcloud.com/szuanimals-1327677963/系统/小红书.jpg`,
+  contact_qr_douyin: `https://cos.ap-guangzhou.myqcloud.com/szuanimals-1327677963/系统/抖音.jpg`,
   // 新猫问卷图片
   feedback_wj_img: `https://cos.ap-guangzhou.myqcloud.com/szuanimals-1327677963/系统/新猫问卷.png`,
   // 小程序菊花码图片
@@ -68,7 +73,7 @@ module.exports = {
     // 关于页，pages/info/info
     info: {
       share_tip: "关于",
-      slogan: "拍照记录校园内猫猫的成长轨迹",
+      slogan: "深大TNR猫协",
     },
     // 猫猫详情页，pages/genealogy/detailCat/detailCat
     detail_cat: {

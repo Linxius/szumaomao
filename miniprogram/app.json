@@ -42,7 +42,8 @@
     "pages/info/myFollowCats/myFollowCats",
     "pages/manage/catManage/catManage",
     "pages/info/dashboard/dashboard",
-    "pages/genealogy/detailCat/relationGraph/relationGraph"
+    "pages/genealogy/detailCat/relationGraph/relationGraph",
+    "pages/info/contact/contact"
   ],
   "subPackages": [
     {

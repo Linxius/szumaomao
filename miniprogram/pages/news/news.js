@@ -163,8 +163,14 @@ Page({
     } else {
       var newsList = this.data.newsList;
       var newsList_show = [];
+      // 分类映射：小黑板→黑板，小日志→日志
+      var classMap = {
+        '小黑板': '黑板',
+        '小日志': '日志',
+      };
       for (let i = 0; i < newsList.length; i++) {
-        if (newsList[i].class == button_chosen) {
+        var class_name = classMap[newsList[i].class] || newsList[i].class;
+        if (class_name == button_chosen) {
           newsList_show.push(newsList[i]);
         }
       }
