@@ -214,6 +214,11 @@ Page({
     if (!isAuditMode) {
       filteredCards.push(
         {
+          icon: "/pages/public/images/info/btn/user.svg",
+          label: "个人主页",
+          path: "/pages/info/userInfo/userInfo",
+        }, 
+        {
           icon: "/pages/public/images/info/btn/badge.svg",
           label: "联系我们",
           path: "/pages/info/contact/contact",
